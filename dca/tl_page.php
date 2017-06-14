@@ -10,7 +10,7 @@ $GLOBALS['TL_DCA']['tl_page'] ['fields'] ['grupeadmidio']=  array
         (
           'label'               => &$GLOBALS['TL_LANG']['tl_page']['grupeadmidio'],
           'exclude'		          => true,
-          'inputType'           => 'select',
+          'inputType'           => 'checkbox',
           'options_callback'    => array('contactadmidio', 'getListGrupe'),
           'eval'	              => array('multiple' => true),
           'sql'                 => "varchar(255) NOT NULL default ''"

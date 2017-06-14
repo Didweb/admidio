@@ -13,11 +13,11 @@ class contactadmidio  extends Backend
 
       mysql_select_db('admidio') or die('Not conexion with DB');
 
-      $query = 'SELECT * FROM adm_users';
+      $query = 'SELECT * FROM adm_categories WHERE cat_type="ROL" AND cat_org_id=1 AND cat_hidden=1 ';
       $result = mysql_query($query) or die('Conexion Error: ' . mysql_error());
 
       while ($fila = mysql_fetch_array($result, MYSQL_ASSOC)) {
-        $list[$fila["usr_id"]] = $fila["usr_login_name"];
+        $list[$fila["cat_id"]] = $fila["cat_name"];
         }
 
       mysql_free_result($result);
